@@ -8,7 +8,6 @@
  *}
 
 {extends 'component@layout.layout'}
-
 {block 'layout_options' append}
     {$layoutShowSidebar = $layoutShowSidebar|default:true}
     {$layoutShowSystemMessages = $layoutShowSystemMessages|default:true}
@@ -20,6 +19,8 @@
 {/block}
 
 {block 'layout_head' append}
+
+    {hook run='initImbaChat'}
     {* Получаем блоки для вывода в сайдбаре *}
     {if $layoutShowSidebar}
         {show_blocks group='right' assign=layoutSidebarBlocks}
