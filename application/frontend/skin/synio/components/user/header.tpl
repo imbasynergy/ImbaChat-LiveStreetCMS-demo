@@ -36,7 +36,6 @@
                 </p>
             {/if}
         </div>
-        {hook run='imbachat_opendialog'}
     </div>
 
     {* Рейтинг *}
